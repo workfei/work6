@@ -1,0 +1,13 @@
+一.nodejs整个配置流程:
+1.下载安装node.js  // 官网 https://nodejs.org/en/  下载windows lnstaller (.msi)  64位
+2.找到nodejs文件夹里面创建node_cache和node_glocal文件夹
+3.打开cmd命令窗口，输入:
+   npm config set prefix "D:\Develop\nodejs\node_global"//获取是自己文件夹node_global的路径
+   npm config set cache "D:\Develop\nodejs\node_cache"//获取是自己文件夹node_cache的路径
+4.系统-高级系统设置-环境变量中
+   系统变量-新建变量名:NODE_PATH,值:自己文件夹的node_modules路径
+   用户变量-选择变量为Path的-编辑更改为自己文件夹node_global的路径
+2.出现错误的:
+   1.单词错误
+   2.环境变量没有修改
+   3.没有创建node_cache和node_glocal文件夹   
