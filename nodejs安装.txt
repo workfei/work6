@@ -1,0 +1,29 @@
+1.
+先打开cmd命令窗口 输入 set-ExecutionPolicy RemoteSigned 
+在输入A 再按参考网站操作
+
+nodeJS安装和环境变量的配置
+打开网站 https://www.cnblogs.com/coder-lzh/p/9232192.html 
+
+2.https://www.cnblogs.com/xiaoleiel/p/11160569.html
+https://segmentfault.com/a/1190000007437258 
+(两个参考网站)
+开始打开windows powerShell 以管理员方式打开
+node -v 查看node.js是否下载
+npm -v 查看是否有
+然后在终端输入npm install gulp -g 下载gulp -g是全局的
+再gulp -v 看是否下载
+再输入npm init 一路回车 会生成package.json
+查看下载版本等等
+创建gulpfile.js 再输入下面代码
+
+const gulp = require('gulp')
+const csso = require('gulp-csso')
+// 建立gulp任务
+gulp.task('first', async () => {
+    console.log('第一个任务');
+    gulp.src('./src/css/index.css').pipe(csso()).pipe(gulp.dest('./dist/css'))
+})
+
+创建路径src/css/index.css 里面放要压缩的css文件
+终端输入 gulp first 可以生成压缩css文件
