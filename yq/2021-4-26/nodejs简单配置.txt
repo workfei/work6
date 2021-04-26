@@ -1,0 +1,26 @@
+1.下载好nodejs
+2.1.在nodejs中创建node_cache和node_global文件夹
+	2.cmd命名窗口输入  npm config set prefix "D:\Develop\nodejs\node_global"
+	npm config set cache "D:\Develop\nodejs\node_cache"(注意是自己的储存盘的路径)
+	3.找到我的电脑的高级系统设置===>环境变量
+	4.系统变量新建变量
+		变量名:NODE_PATH
+		变量值:(自己的储存盘的路径)如:D:\Develop\nodejs\node_global
+	5.用户变量
+		Path===>编辑===>选择默认路径 如:C:\Users\JayYang\AppData\Roaming\npm===>
+		编辑==>修改为自己的储存盘的路径  如:D;\Develop\nodejs\node_global
+
+	//详细请于网站查看:
+	https://www.cnblogs.com/coder-lzh/p/9232192.html
+
+3.1本地电脑点击===>开始===>Widows PowerShell=>右键以管理员打开
+	3.2set-ExecutionPolicy RemoteSigned  ==>选择输入A
+	3.3npm config set prefix "(node_global所在的内存盘路径)"
+	3.4npm config set cache "(node_cache所在的内存盘路径)"
+	3.5npm i gulp -g
+	3.6gulp -v(查看是否安装成功,成功会出现版本号)
+
+
+vscode中使用参考:
+1.(gulp -v查看版本号是否正确,npm -v是查看npm版本)
+2.(gulp first进行压缩)===>(如果csso没找到就进行 npm i gulp-csso下载安装csso)
