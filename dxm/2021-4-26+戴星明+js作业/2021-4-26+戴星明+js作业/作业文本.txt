@@ -1,0 +1,24 @@
+1.把nodejs整个配置流程写下，并把出现错误的解决方案写出来
+一、配置流程
+1.下网上载node.js的安装包存放到指定路径，之后找到相应路径，创建两个空文件夹
+①node_global ②node_cache
+2.打开cmd命名窗口，分别输入  npm config set prefix "存放的路径\node_global" 和 
+npm config set cache "存放的路径\node_cache"
+3.设置环境变量，根据步骤分别点击“我的电脑”-右键-“属性”-“高级系统设置”-“高级”-“环境变量”
+进入环境变量对话框 ①：在【系统变量】下新建【NODE_PATH】，输入【存放的路径\node_global\node_modules】
+②：将【用户变量】下的【Path】中【C:\Users\用户名\AppData\Roaming\npm】修改为【存放的路径\node_global】
+4.配置完后，进行测试，打开cmd窗口，输入“npm install express -g”进行全局的npm安装
+
+二、gulp的安装
+1.打开window功能菜单，以管理员身份运行【Windows PowerShell】命令窗口，输入“set-ExecutionPolicy RemoteSigned”后选A
+2.输入“npm i gulp -g”，安装全局的gulp
+3.输入“gulp -v”，查看安装好后gulp的版本
+
+三、出现的错误及解决方案
+1.容易在初次安装后，输入“gulp -v”出现识别不了的提示信息，多次安装后依然如此，此时很有可能是全局的gulp安装中，
+有部分文件出现了冲突，此时就现需要卸载掉已经安装的gulp文件，先输入“npm uninstall gulp -g”删除本地版本的gulp，
+再输入“npm uninstall gulp-cli -g”删除CLI版本的gulp
+2.输入“npm i”进行安装，此次安装是具有本地记录的，只会安装有保留记录的文件
+3.删除后再次进行上述的gulp的安装步骤即可，查看有版本显示后，可以重新启动运行js的软件，以防出现软件内部的缓存问题
+!!!在安装过程中要注意环境变量的配置和权限的问题，例如报错err-4048。。。那可能是vscode运行权限不够，需要使用管理员权限运行
+
