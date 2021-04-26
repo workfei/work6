@@ -1,0 +1,10 @@
+node.js配置步骤
+1.先下载node.js然后创建两个文件夹node-cache和node-global打开cmd命令给这两个文件进行初始化配置,输入npm config set prefix "文件路径"和npm config set cache "文件路径"
+2.找到电脑属性找到环境变量先创建一个系统变量NODE_PATH  node_modules文件路径在修改PCZ的用户量中的path中的路径 把里面的路径改为node_global的文件路径
+3.输入node -v 查看版本,正常显示则安装成功
+4.其他指令 安装开发级服务器 npm install -g  前端项目初始化 npm init
+
+node.js容易出错的问题
+1.出现503不是自己的问题是远程服务器的错误没有办法解决只能重新开始
+2.如果路径出现问题也许是环境因素设置错误
+3.如果输入指令后报错也许是单词打错或是电脑版本不支持
