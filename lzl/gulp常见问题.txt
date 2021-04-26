@@ -1,0 +1,12 @@
+用npm i gulp -g全局安装gulp不能查看版本号还报gulp : 无法将“gulp”项识别为 cmdlet、函数、脚本文件或可运行程序的名称错误时
+可能是因为权限不够,你也可以尝试重装
+然后把node环境变量配置下 网址:https://www.cnblogs.com/coder-lzh/p/9232192.html (按照网址上的操作)
+我们也可以按下window键找到Windows PowerShell (右键找到以管理员身份运行) 
+进入后 输入set-ExecutionPolicy RemoteSigned
+在输入大写A 回车
+npm config set prefix "D:\Develop\nodejs\node_global"(后面输自己的路径)
+npm config set cache "D:\Develop\nodejs\node_cache"(后面输自己的路径)
+然后在重新装gulp
+装完后试试gulp -v 能不能查看版本号 不能的话退出重进就好
+
+
